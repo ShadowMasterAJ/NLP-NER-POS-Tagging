@@ -1,0 +1,37 @@
+2023-10-25 15:24:16,569 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=64, GRU Units=32, Batch Size=64
+2023-10-25 15:26:05,322 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 150)           450000000 
+                                                                 
+ spatial_dropout1d (Spatial  (None, 40, 150)           0         
+ Dropout1D)                                                      
+                                                                 
+ lstm (LSTM)                 (None, 40, 64)            55040     
+                                                                 
+ dropout (Dropout)           (None, 40, 64)            0         
+                                                                 
+ gru (GRU)                   (None, 40, 32)            9408      
+                                                                 
+ dropout_1 (Dropout)         (None, 40, 32)            0         
+                                                                 
+ attention (Attention)       (None, 40, 32)            3072      
+                                                                 
+ global_average_pooling1d (  (None, 32)                0         
+ GlobalAveragePooling1D)                                         
+                                                                 
+ dense (Dense)               (None, 128)               4224      
+                                                                 
+ dropout_2 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 450072389 (1.68 GB)
+Trainable params: 72389 (282.77 KB)
+Non-trainable params: 450000000 (1.68 GB)
+_________________________________________________________________
+2023-10-25 15:26:05,329 - root - INFO - Test Loss: 1.1239943504333496
+2023-10-25 15:26:05,329 - root - INFO - Test Accuracy: 0.5680000185966492

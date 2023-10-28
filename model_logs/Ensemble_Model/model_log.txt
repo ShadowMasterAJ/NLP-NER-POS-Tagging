@@ -1,0 +1,589 @@
+2023-10-26 18:52:54,460 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 100)           300000000 
+                                                                 
+ bidirectional (Bidirection  (None, 40, 256)           234496    
+ al)                                                             
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 64)                55680     
+ onal)                                                           
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 256)               16640     
+                                                                 
+ dropout_1 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 300308101 (1.12 GB)
+Trainable params: 308101 (1.18 MB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-10-26 18:52:54,462 - root - INFO - Testing hyperparameters: Embedding Size=100, LSTM Units=128, GRU Units=32, Batch Size=64
+2023-10-26 18:52:54,462 - root - INFO - Test Loss: 0.5483068823814392
+2023-10-26 18:52:54,462 - root - INFO - Test Accuracy: 0.8159999847412109
+2023-10-26 18:56:10,740 - root - INFO - Model Architecture:
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 40, 150)           450000000 
+                                                                 
+ bidirectional_2 (Bidirecti  (None, 40, 256)           285696    
+ onal)                                                           
+                                                                 
+ bidirectional_3 (Bidirecti  (None, 64)                55680     
+ onal)                                                           
+                                                                 
+ dropout_2 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_2 (Dense)             (None, 256)               16640     
+                                                                 
+ dropout_3 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_3 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 450359301 (1.68 GB)
+Trainable params: 359301 (1.37 MB)
+Non-trainable params: 450000000 (1.68 GB)
+_________________________________________________________________
+2023-10-26 18:56:10,749 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=128, GRU Units=32, Batch Size=64
+2023-10-26 18:56:10,749 - root - INFO - Test Loss: 0.5173414945602417
+2023-10-26 18:56:10,749 - root - INFO - Test Accuracy: 0.8220000267028809
+2023-10-26 18:59:47,578 - root - INFO - Model Architecture:
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_3 (Embedding)     (None, 40, 150)           450000000 
+                                                                 
+ spatial_dropout1d_1 (Spati  (None, 40, 150)           0         
+ alDropout1D)                                                    
+                                                                 
+ lstm_3 (LSTM)               (None, 40, 64)            55040     
+                                                                 
+ dropout_7 (Dropout)         (None, 40, 64)            0         
+                                                                 
+ gru_3 (GRU)                 (None, 40, 32)            9408      
+                                                                 
+ dropout_8 (Dropout)         (None, 40, 32)            0         
+                                                                 
+ attention_1 (Attention)     (None, 40, 32)            3072      
+                                                                 
+ global_average_pooling1d_1  (None, 32)                0         
+  (GlobalAveragePooling1D)                                       
+                                                                 
+ dense_6 (Dense)             (None, 128)               4224      
+                                                                 
+ dropout_9 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_7 (Dense)             (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 450072389 (1.68 GB)
+Trainable params: 72389 (282.77 KB)
+Non-trainable params: 450000000 (1.68 GB)
+_________________________________________________________________
+2023-10-26 18:59:47,583 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=64, GRU Units=32, Batch Size=64
+2023-10-26 18:59:47,583 - root - INFO - Test Loss: 1.3982881307601929
+2023-10-26 18:59:47,583 - root - INFO - Test Accuracy: 0.4059999883174896
+2023-10-26 19:20:06,977 - root - INFO - Model Architecture:
+Model: "sequential_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_4 (Embedding)     (None, 40, 150)           450000000 
+                                                                 
+ spatial_dropout1d_2 (Spati  (None, 40, 150)           0         
+ alDropout1D)                                                    
+                                                                 
+ lstm_4 (LSTM)               (None, 40, 64)            55040     
+                                                                 
+ dropout_10 (Dropout)        (None, 40, 64)            0         
+                                                                 
+ gru_4 (GRU)                 (None, 40, 32)            9408      
+                                                                 
+ dropout_11 (Dropout)        (None, 40, 32)            0         
+                                                                 
+ attention_2 (Attention)     (None, 40, 32)            3072      
+                                                                 
+ global_average_pooling1d_2  (None, 32)                0         
+  (GlobalAveragePooling1D)                                       
+                                                                 
+ dense_8 (Dense)             (None, 128)               4224      
+                                                                 
+ dropout_12 (Dropout)        (None, 128)               0         
+                                                                 
+ dense_9 (Dense)             (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 450072389 (1.68 GB)
+Trainable params: 72389 (282.77 KB)
+Non-trainable params: 450000000 (1.68 GB)
+_________________________________________________________________
+2023-10-26 19:20:06,980 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=64, GRU Units=32, Batch Size=64
+2023-10-26 19:20:06,980 - root - INFO - Test Loss: 1.405152440071106
+2023-10-26 19:20:06,980 - root - INFO - Test Accuracy: 0.4059999883174896
+2023-10-26 19:31:34,930 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 150)           450000000 
+                                                                 
+ bidirectional (Bidirection  (None, 40, 256)           285696    
+ al)                                                             
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 64)                55680     
+ onal)                                                           
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 256)               16640     
+                                                                 
+ dropout_1 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 450359301 (1.68 GB)
+Trainable params: 359301 (1.37 MB)
+Non-trainable params: 450000000 (1.68 GB)
+_________________________________________________________________
+2023-10-26 19:31:34,937 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=128, GRU Units=32, Batch Size=64
+2023-10-26 19:31:34,937 - root - INFO - Test Loss: 0.709226131439209
+2023-10-26 19:31:34,937 - root - INFO - Test Accuracy: 0.6800000071525574
+2023-10-26 19:37:34,362 - root - INFO - Model Architecture:
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 40, 200)           600000000 
+                                                                 
+ bidirectional_2 (Bidirecti  (None, 40, 256)           336896    
+ onal)                                                           
+                                                                 
+ bidirectional_3 (Bidirecti  (None, 64)                55680     
+ onal)                                                           
+                                                                 
+ dropout_2 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_2 (Dense)             (None, 256)               16640     
+                                                                 
+ dropout_3 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_3 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 600410501 (2.24 GB)
+Trainable params: 410501 (1.57 MB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 19:37:34,381 - root - INFO - Testing hyperparameters: Embedding Size=200, LSTM Units=128, GRU Units=32, Batch Size=64
+2023-10-26 19:37:34,381 - root - INFO - Test Loss: 0.7326042056083679
+2023-10-26 19:37:34,381 - root - INFO - Test Accuracy: 0.7860000133514404
+2023-10-26 19:39:14,568 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 19:39:14,586 - root - INFO - Model Architecture:
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_2 (Embedding)     (None, 40, 200)           600000000 
+                                                                 
+ conv1d (Conv1D)             (None, 36, 128)           128128    
+                                                                 
+ global_max_pooling1d (Glob  (None, 128)               0         
+ alMaxPooling1D)                                                 
+                                                                 
+ dense_4 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_4 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_5 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600136709 (2.24 GB)
+Trainable params: 136709 (534.02 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 19:39:14,587 - root - INFO - Test Loss: 0.5931227803230286
+2023-10-26 19:39:14,587 - root - INFO - Test Accuracy: 0.8140000104904175
+#################################################################################
+2023-10-26 19:41:50,642 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 19:41:50,649 - root - INFO - Model Architecture:
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_3 (Embedding)     (None, 40, 200)           600000000 
+                                                                 
+ conv1d_1 (Conv1D)           (None, 36, 128)           128128    
+                                                                 
+ global_max_pooling1d_1 (Gl  (None, 128)               0         
+ obalMaxPooling1D)                                               
+                                                                 
+ dense_6 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_5 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_7 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600136709 (2.24 GB)
+Trainable params: 136709 (534.02 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 19:41:50,649 - root - INFO - Test Loss: 0.6960974931716919
+2023-10-26 19:41:50,649 - root - INFO - Test Accuracy: 0.7739999890327454
+#################################################################################
+2023-10-26 19:44:00,017 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 19:44:00,031 - root - INFO - Model Architecture:
+Model: "sequential_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_4 (Embedding)     (None, 40, 200)           600000000 
+                                                                 
+ conv1d_2 (Conv1D)           (None, 36, 128)           128128    
+                                                                 
+ global_max_pooling1d_2 (Gl  (None, 128)               0         
+ obalMaxPooling1D)                                               
+                                                                 
+ dense_8 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_6 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_9 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600136709 (2.24 GB)
+Trainable params: 136709 (534.02 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 19:44:00,031 - root - INFO - Test Loss: 0.5937607288360596
+2023-10-26 19:44:00,031 - root - INFO - Test Accuracy: 0.828000009059906
+#################################################################################
+2023-10-26 20:48:04,994 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 20:48:05,005 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 200)           600000000 
+                                                                 
+ conv1d (Conv1D)             (None, 36, 128)           128128    
+                                                                 
+ global_max_pooling1d (Glob  (None, 128)               0         
+ alMaxPooling1D)                                                 
+                                                                 
+ dense (Dense)               (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600136709 (2.24 GB)
+Trainable params: 136709 (534.02 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 20:48:05,006 - root - INFO - Test Loss: 0.8842531442642212
+2023-10-26 20:48:05,006 - root - INFO - Test Accuracy: 0.7139999866485596
+#################################################################################
+2023-10-26 20:50:38,091 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 20:50:38,096 - root - INFO - Model Architecture:
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 40, 200)           600000000 
+                                                                 
+ conv1d_1 (Conv1D)           (None, 36, 128)           128128    
+                                                                 
+ global_max_pooling1d_1 (Gl  (None, 128)               0         
+ obalMaxPooling1D)                                               
+                                                                 
+ dense_2 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_3 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600136709 (2.24 GB)
+Trainable params: 136709 (534.02 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 20:50:38,096 - root - INFO - Test Loss: 1.235763669013977
+2023-10-26 20:50:38,096 - root - INFO - Test Accuracy: 0.7379999756813049
+#################################################################################
+2023-10-26 20:54:20,451 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 20:54:20,460 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 200)           600000000 
+                                                                 
+ conv1d (Conv1D)             (None, 36, 128)           128128    
+                                                                 
+ global_max_pooling1d (Glob  (None, 128)               0         
+ alMaxPooling1D)                                                 
+                                                                 
+ dense (Dense)               (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600136709 (2.24 GB)
+Trainable params: 136709 (534.02 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 20:54:20,460 - root - INFO - Test Loss: 0.6743355989456177
+2023-10-26 20:54:20,460 - root - INFO - Test Accuracy: 0.7599999904632568
+#################################################################################
+2023-10-26 20:57:42,874 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 20:57:42,895 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 40)]              0         
+                                                                 
+ embedding (Embedding)       (None, 40, 200)           600000000 
+                                                                 
+ conv1d (Conv1D)             (None, 36, 128)           128128    
+                                                                 
+ attention (Attention)       ((None, 128),             2591      
+                              (None, 36, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600139300 (2.24 GB)
+Trainable params: 139300 (544.14 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 20:57:42,895 - root - INFO - Test Loss: 0.5408533811569214
+2023-10-26 20:57:42,896 - root - INFO - Test Accuracy: 0.8180000185966492
+#################################################################################
+2023-10-26 21:04:12,275 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 21:04:12,291 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 40)]              0         
+                                                                 
+ embedding (Embedding)       (None, 40, 200)           600000000 
+                                                                 
+ conv1d (Conv1D)             (None, 36, 128)           128128    
+                                                                 
+ attention (Attention)       ((None, 128),             2591      
+                              (None, 36, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600139300 (2.24 GB)
+Trainable params: 139300 (544.14 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 21:04:12,291 - root - INFO - Test Loss: 0.44788700342178345
+2023-10-26 21:04:12,292 - root - INFO - Test Accuracy: 0.828000009059906
+#################################################################################
+2023-10-26 21:06:34,601 - root - INFO - Testing hyperparameters: Embedding Size=200, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 21:06:34,610 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding (Embedding)       (None, 50, 200)           600000000 
+                                                                 
+ conv1d (Conv1D)             (None, 46, 128)           128128    
+                                                                 
+ attention (Attention)       ((None, 128),             2591      
+                              (None, 46, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 600139300 (2.24 GB)
+Trainable params: 139300 (544.14 KB)
+Non-trainable params: 600000000 (2.24 GB)
+_________________________________________________________________
+2023-10-26 21:06:34,610 - root - INFO - Test Loss: 0.5151271820068359
+2023-10-26 21:06:34,610 - root - INFO - Test Accuracy: 0.8140000104904175
+#################################################################################
+2023-10-26 21:08:52,710 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 21:08:52,715 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding (Embedding)       (None, 50, 100)           300000000 
+                                                                 
+ conv1d (Conv1D)             (None, 46, 128)           64128     
+                                                                 
+ attention (Attention)       ((None, 128),             3109      
+                              (None, 46, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300075818 (1.12 GB)
+Trainable params: 75818 (296.16 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-10-26 21:08:52,715 - root - INFO - Test Loss: 0.5179021954536438
+2023-10-26 21:08:52,715 - root - INFO - Test Accuracy: 0.8240000009536743
+#################################################################################
+2023-10-26 21:13:29,595 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 21:13:29,597 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding (Embedding)       (None, 50, 100)           300000000 
+                                                                 
+ conv1d (Conv1D)             (None, 46, 128)           64128     
+                                                                 
+ attention (Attention)       ((None, 128),             3109      
+                              (None, 46, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300075818 (1.12 GB)
+Trainable params: 75818 (296.16 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-10-26 21:13:29,597 - root - INFO - Test Loss: 0.6321367621421814
+2023-10-26 21:13:29,597 - root - INFO - Test Accuracy: 0.7699999809265137
+#################################################################################
+2023-10-26 21:15:36,435 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-26 21:15:36,455 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding (Embedding)       (None, 50, 100)           300000000 
+                                                                 
+ conv1d (Conv1D)             (None, 46, 128)           64128     
+                                                                 
+ simple_rnn (SimpleRNN)      (None, 46, 10)            1390      
+                                                                 
+ attention (Attention)       ((None, 10),              277       
+                              (None, 46, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                704       
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300066824 (1.12 GB)
+Trainable params: 66824 (261.03 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-10-26 21:15:36,472 - root - INFO - Test Loss: 0.554166316986084
+2023-10-26 21:15:36,472 - root - INFO - Test Accuracy: 0.8059999942779541
+#################################################################################
+2023-10-27 05:50:22,515 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-27 05:50:22,517 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding (Embedding)       (None, 50, 100)           300000000 
+                                                                 
+ conv1d (Conv1D)             (None, 46, 128)           64128     
+                                                                 
+ attention (Attention)       ((None, 128),             2073      
+                              (None, 46, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300074782 (1.12 GB)
+Trainable params: 74782 (292.12 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-10-27 05:50:22,517 - root - INFO - Test Loss: 0.5164554119110107
+2023-10-27 05:50:22,517 - root - INFO - Test Accuracy: 0.8119999766349792
+#################################################################################
+2023-10-27 05:54:33,073 - gensim.utils - INFO - loading KeyedVectors object from models/pretrained/word2vec_model.gensim
+2023-10-27 05:54:34,490 - gensim.utils - INFO - loading vectors from models/pretrained/word2vec_model.gensim.vectors.npy with mmap=None
+2023-10-27 05:54:39,124 - gensim.utils - INFO - KeyedVectors lifecycle event {'fname': 'models/pretrained/word2vec_model.gensim', 'datetime': '2023-10-27T05:54:39.124484', 'gensim': '4.3.2', 'python': '3.10.13 (main, Sep 11 2023, 08:39:02) [Clang 14.0.6 ]', 'platform': 'macOS-10.16-x86_64-i386-64bit', 'event': 'loaded'}
+2023-10-27 05:55:12,240 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-10-27 05:55:12,245 - root - INFO - Model Architecture:
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding_1 (Embedding)     (None, 50, 100)           300000000 
+                                                                 
+ conv1d_1 (Conv1D)           (None, 46, 128)           64128     
+                                                                 
+ attention_1 (Attention)     ((None, 128),             2073      
+                              (None, 46, 1))                     
+                                                                 
+ dense_8 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_9 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300074782 (1.12 GB)
+Trainable params: 74782 (292.12 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-10-27 05:55:12,246 - root - INFO - Test Loss: 0.5954347252845764
+2023-10-27 05:55:12,246 - root - INFO - Test Accuracy: 0.8040000200271606
+#################################################################################

@@ -1,0 +1,33 @@
+2023-10-25 06:23:21,864 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=64, GRU Units=32, Batch Size=64
+2023-10-25 06:25:44,191 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 150)           450000000 
+                                                                 
+ bidirectional (Bidirection  (None, 40, 128)           110080    
+ al)                                                             
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 40, 64)            31104     
+ onal)                                                           
+                                                                 
+ attention (Attention)       (None, 40, 64)            12288     
+                                                                 
+ global_average_pooling1d (  (None, 64)                0         
+ GlobalAveragePooling1D)                                         
+                                                                 
+ dense (Dense)               (None, 256)               16640     
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 5)                 1285      
+                                                                 
+=================================================================
+Total params: 450171397 (1.68 GB)
+Trainable params: 171397 (669.52 KB)
+Non-trainable params: 450000000 (1.68 GB)
+_________________________________________________________________
+2023-10-25 06:25:44,198 - root - INFO - Test Loss: 0.5452852249145508
+2023-10-25 06:25:44,198 - root - INFO - Test Accuracy: 0.7879999876022339
+2023-10-25 06:25:44,198 - root - INFO - Testing hyperparameters: Embedding Size=150, LSTM Units=128, GRU Units=32, Batch Size=64

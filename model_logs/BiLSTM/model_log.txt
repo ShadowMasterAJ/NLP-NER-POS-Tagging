@@ -308,3 +308,63 @@ _________________________________________________________________
 2023-11-05 18:56:58,075 - root - INFO - Testing hyperparameters: Embedding Size=200, LSTM Units=64, Batch Size=512
 2023-11-05 18:56:58,075 - root - INFO - Test Loss: 0.7512434124946594
 2023-11-05 18:56:58,075 - root - INFO - Test Accuracy: 0.75
+2023-11-09 01:30:15,847 - gensim.utils - INFO - loading KeyedVectors object from models/pretrained/word2vec_model.gensim
+2023-11-09 01:30:17,339 - gensim.utils - INFO - loading vectors from models/pretrained/word2vec_model.gensim.vectors.npy with mmap=None
+2023-11-09 01:30:22,009 - gensim.utils - INFO - KeyedVectors lifecycle event {'fname': 'models/pretrained/word2vec_model.gensim', 'datetime': '2023-11-09T01:30:22.009319', 'gensim': '4.3.2', 'python': '3.10.13 (main, Sep 11 2023, 08:39:02) [Clang 14.0.6 ]', 'platform': 'macOS-10.16-x86_64-i386-64bit', 'event': 'loaded'}
+2023-11-09 01:55:34,799 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-11-09 01:55:40,528 - tensorflow - INFO - Assets written to: model_logs/CNN/model_0.808/assets
+2023-11-09 01:55:40,568 - absl - WARNING - <__main__.Attention object at 0x7fdf94f78460> has the same name 'Attention' as a built-in Keras object. Consider renaming <class '__main__.Attention'> to avoid naming conflicts when loading with `tf.keras.models.load_model`. If renaming is not possible, pass the object in the `custom_objects` parameter of the load function.
+2023-11-09 01:55:40,604 - root - INFO - Model Architecture:
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_2 (InputLayer)        [(None, 40)]                 0         []                            
+                                                                                                  
+ embedding_2 (Embedding)     (None, 40, 100)              3000000   ['input_2[0][0]']             
+                                                          00                                      
+                                                                                                  
+ conv1d_3 (Conv1D)           (None, 40, 128)              38528     ['embedding_2[0][0]']         
+                                                                                                  
+ conv1d_4 (Conv1D)           (None, 40, 128)              65664     ['conv1d_3[0][0]']            
+                                                                                                  
+ conv1d_5 (Conv1D)           (None, 40, 128)              82048     ['conv1d_4[0][0]']            
+                                                                                                  
+ batch_normalization_3 (Bat  (None, 40, 128)              512       ['conv1d_3[0][0]']            
+ chNormalization)                                                                                 
+                                                                                                  
+ batch_normalization_4 (Bat  (None, 40, 128)              512       ['conv1d_4[0][0]']            
+ chNormalization)                                                                                 
+                                                                                                  
+ batch_normalization_5 (Bat  (None, 40, 128)              512       ['conv1d_5[0][0]']            
+ chNormalization)                                                                                 
+                                                                                                  
+ concatenate_2 (Concatenate  (None, 40, 384)              0         ['batch_normalization_3[0][0]'
+ )                                                                  , 'batch_normalization_4[0][0]
+                                                                    ',                            
+                                                                     'batch_normalization_5[0][0]'
+                                                                    ]                             
+                                                                                                  
+ global_max_pooling1d_2 (Gl  (None, 384)                  0         ['concatenate_2[0][0]']       
+ obalMaxPooling1D)                                                                                
+                                                                                                  
+ tf.expand_dims (TFOpLambda  (None, 1, 384)               0         ['global_max_pooling1d_2[0][0]
+ )                                                                  ']                            
+                                                                                                  
+ attention_1 (Attention)     ((None, 384),                49345     ['tf.expand_dims[0][0]']      
+                              (None, 1, 1))                                                       
+                                                                                                  
+ dense_9 (Dense)             (None, 128)                  49280     ['attention_1[0][0]']         
+                                                                                                  
+ dropout_1 (Dropout)         (None, 128)                  0         ['dense_9[0][0]']             
+                                                                                                  
+ dense_10 (Dense)            (None, 5)                    645       ['dropout_1[0][0]']           
+                                                                                                  
+==================================================================================================
+Total params: 300287046 (1.12 GB)
+Trainable params: 286278 (1.09 MB)
+Non-trainable params: 300000768 (1.12 GB)
+__________________________________________________________________________________________________
+2023-11-09 01:55:40,605 - root - INFO - Test Loss: 2.2004284858703613
+2023-11-09 01:55:40,605 - root - INFO - Test Accuracy: 0.8080000281333923
+#################################################################################

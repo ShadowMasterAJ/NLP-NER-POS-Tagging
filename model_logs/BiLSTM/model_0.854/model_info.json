@@ -1,0 +1,10 @@
+{
+    "Model": "bi_lstm = tf.keras.Sequential([Embedding(input_dim=vocab_size, output_dim=embedding_size, input_length=max_seq_length, trainable=False), Bidirectional(LSTM(lstm_units, return_sequences=True)), Conv1D(128, 5, activation='relu', padding='same'), GlobalMaxPooling1D(), Dropout(0.2), Dense(128, activation='relu', kernel_regularizer=l2(0.01)), BatchNormalization(), Dense(5, activation='softmax')])",
+    "Hyperparameters": {
+        "batch_size": 256,
+        "embedding_size": 250,
+        "lstm_units": 32
+    },
+    "Test Loss": 0.7725759148597717,
+    "Test Accuracy": 0.8539999723434448
+}

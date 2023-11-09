@@ -864,3 +864,193 @@ _________________________________________________________________
 2023-10-26 05:21:12,201 - root - INFO - Test Loss: 0.5420755743980408
 2023-10-26 05:21:12,201 - root - INFO - Test Accuracy: 0.7919999957084656
 #################################################################################
+2023-11-09 00:09:41,245 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-11-09 00:09:47,563 - tensorflow - INFO - Assets written to: model_logs/CNN/model_0.022000026702880815/assets
+2023-11-09 00:09:47,588 - absl - WARNING - <__main__.Attention object at 0x7f8db77d4d90> has the same name 'Attention' as a built-in Keras object. Consider renaming <class '__main__.Attention'> to avoid naming conflicts when loading with `tf.keras.models.load_model`. If renaming is not possible, pass the object in the `custom_objects` parameter of the load function.
+2023-11-09 00:09:47,592 - root - INFO - Model Architecture:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 40)]              0         
+                                                                 
+ embedding (Embedding)       (None, 40, 100)           300000000 
+                                                                 
+ conv1d (Conv1D)             (None, 36, 128)           64128     
+                                                                 
+ attention (Attention)       ((None, 128),             2073      
+                              (None, 36, 1))                     
+                                                                 
+ dense_3 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout (Dropout)           (None, 64)                0         
+                                                                 
+ dense_4 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300074782 (1.12 GB)
+Trainable params: 74782 (292.12 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-11-09 00:09:47,593 - root - INFO - Test Loss: 0.47282344102859497
+2023-11-09 00:09:47,593 - root - INFO - Test Accuracy: 0.8220000267028809
+#################################################################################
+2023-11-09 00:16:46,235 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-11-09 00:16:51,889 - tensorflow - INFO - Assets written to: model_logs/CNN/model_0.766/assets
+2023-11-09 00:16:51,910 - absl - WARNING - <__main__.Attention object at 0x7f8d075fa560> has the same name 'Attention' as a built-in Keras object. Consider renaming <class '__main__.Attention'> to avoid naming conflicts when loading with `tf.keras.models.load_model`. If renaming is not possible, pass the object in the `custom_objects` parameter of the load function.
+2023-11-09 00:16:51,915 - root - INFO - Model Architecture:
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 40)]              0         
+                                                                 
+ embedding_1 (Embedding)     (None, 40, 100)           300000000 
+                                                                 
+ conv1d_1 (Conv1D)           (None, 36, 128)           64128     
+                                                                 
+ attention_1 (Attention)     ((None, 128),             2073      
+                              (None, 36, 1))                     
+                                                                 
+ dense_8 (Dense)             (None, 64)                8256      
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_9 (Dense)             (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300074782 (1.12 GB)
+Trainable params: 74782 (292.12 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-11-09 00:16:51,915 - root - INFO - Test Loss: 0.5750237107276917
+2023-11-09 00:16:51,915 - root - INFO - Test Accuracy: 0.765999972820282
+#################################################################################
+2023-11-09 00:19:04,283 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-11-09 00:19:09,545 - tensorflow - INFO - Assets written to: model_logs/CNN/model_0.824/assets
+2023-11-09 00:19:09,562 - absl - WARNING - <__main__.Attention object at 0x7f8ee88ebeb0> has the same name 'Attention' as a built-in Keras object. Consider renaming <class '__main__.Attention'> to avoid naming conflicts when loading with `tf.keras.models.load_model`. If renaming is not possible, pass the object in the `custom_objects` parameter of the load function.
+2023-11-09 00:19:09,568 - root - INFO - Model Architecture:
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 40)]              0         
+                                                                 
+ embedding_2 (Embedding)     (None, 40, 100)           300000000 
+                                                                 
+ conv1d_2 (Conv1D)           (None, 36, 128)           64128     
+                                                                 
+ attention_2 (Attention)     ((None, 128),             2073      
+                              (None, 36, 1))                     
+                                                                 
+ dense_13 (Dense)            (None, 64)                8256      
+                                                                 
+ dropout_2 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_14 (Dense)            (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300074782 (1.12 GB)
+Trainable params: 74782 (292.12 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-11-09 00:19:09,568 - root - INFO - Test Loss: 1.5402278900146484
+2023-11-09 00:19:09,568 - root - INFO - Test Accuracy: 0.8240000009536743
+#################################################################################
+2023-11-09 00:27:15,337 - root - INFO - Testing hyperparameters: Embedding Size=100, Conv Depth=1, Conv Width=128, Kernel Size=5, Batch Size=64
+2023-11-09 00:27:22,211 - tensorflow - INFO - Assets written to: model_logs/CNN/model_0.81/assets
+2023-11-09 00:27:22,229 - absl - WARNING - <__main__.Attention object at 0x7f861eaba620> has the same name 'Attention' as a built-in Keras object. Consider renaming <class '__main__.Attention'> to avoid naming conflicts when loading with `tf.keras.models.load_model`. If renaming is not possible, pass the object in the `custom_objects` parameter of the load function.
+2023-11-09 00:27:22,235 - root - INFO - Model Architecture:
+Model: "model_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 40)]              0         
+                                                                 
+ embedding_4 (Embedding)     (None, 40, 100)           300000000 
+                                                                 
+ conv1d_4 (Conv1D)           (None, 36, 128)           64128     
+                                                                 
+ attention_3 (Attention)     ((None, 128),             2073      
+                              (None, 36, 1))                     
+                                                                 
+ dense_20 (Dense)            (None, 64)                8256      
+                                                                 
+ dropout_4 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_21 (Dense)            (None, 5)                 325       
+                                                                 
+=================================================================
+Total params: 300074782 (1.12 GB)
+Trainable params: 74782 (292.12 KB)
+Non-trainable params: 300000000 (1.12 GB)
+_________________________________________________________________
+2023-11-09 00:27:22,235 - root - INFO - Test Loss: 1.8910136222839355
+2023-11-09 00:27:22,235 - root - INFO - Test Accuracy: 0.8100000023841858
+#################################################################################
+2023-11-09 00:36:11,470 - tensorflow - INFO - Assets written to: model_logs/BiLSTM/model_0.846/assets
+2023-11-09 00:36:11,622 - root - INFO - Model Architecture:
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_5 (Embedding)     (None, 40, 200)           600000000 
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 40, 128)           135680    
+ onal)                                                           
+                                                                 
+ conv1d_5 (Conv1D)           (None, 40, 128)           82048     
+                                                                 
+ global_max_pooling1d_1 (Gl  (None, 128)               0         
+ obalMaxPooling1D)                                               
+                                                                 
+ dropout_5 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_22 (Dense)            (None, 128)               16512     
+                                                                 
+ batch_normalization_1 (Bat  (None, 128)               512       
+ chNormalization)                                                
+                                                                 
+ dense_23 (Dense)            (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 600235397 (2.24 GB)
+Trainable params: 235141 (918.52 KB)
+Non-trainable params: 600000256 (2.24 GB)
+_________________________________________________________________
+2023-11-09 00:36:11,622 - root - INFO - Testing hyperparameters: Embedding Size=200, LSTM Units=64, Batch Size=512
+2023-11-09 00:36:11,622 - root - INFO - Test Loss: 0.5389339923858643
+2023-11-09 00:36:11,622 - root - INFO - Test Accuracy: 0.8460000157356262
+2023-11-09 01:02:06,558 - tensorflow - INFO - Assets written to: model_logs/BiLSTM/model_0.854/assets
+2023-11-09 01:02:06,865 - root - INFO - Model Architecture:
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_6 (Embedding)     (None, 40, 250)           750000000 
+                                                                 
+ bidirectional_2 (Bidirecti  (None, 40, 64)            72448     
+ onal)                                                           
+                                                                 
+ conv1d_6 (Conv1D)           (None, 40, 128)           41088     
+                                                                 
+ global_max_pooling1d_2 (Gl  (None, 128)               0         
+ obalMaxPooling1D)                                               
+                                                                 
+ dropout_6 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_24 (Dense)            (None, 128)               16512     
+                                                                 
+ batch_normalization_2 (Bat  (None, 128)               512       
+ chNormalization)                                                
+                                                                 
+ dense_25 (Dense)            (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 750131205 (2.79 GB)
+Trainable params: 130949 (511.52 KB)
+Non-trainable params: 750000256 (2.79 GB)
+_________________________________________________________________
+2023-11-09 01:02:06,866 - root - INFO - Testing hyperparameters: Embedding Size=250, LSTM Units=32, Batch Size=256
+2023-11-09 01:02:06,866 - root - INFO - Test Loss: 0.7725759148597717
+2023-11-09 01:02:06,866 - root - INFO - Test Accuracy: 0.8539999723434448

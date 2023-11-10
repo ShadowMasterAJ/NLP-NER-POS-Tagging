@@ -368,3 +368,69 @@ ________________________________________________________________________________
 2023-11-09 01:55:40,605 - root - INFO - Test Loss: 2.2004284858703613
 2023-11-09 01:55:40,605 - root - INFO - Test Accuracy: 0.8080000281333923
 #################################################################################
+2023-11-10 21:49:05,724 - tensorflow - INFO - Assets written to: model_logs/BiLSTM/model_0.85/assets
+2023-11-10 21:49:05,847 - root - INFO - Model Architecture:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       (None, 40, 300)           2694300   
+                                                                 
+ bidirectional (Bidirection  (None, 40, 64)            85248     
+ al)                                                             
+                                                                 
+ conv1d (Conv1D)             (None, 40, 128)           41088     
+                                                                 
+ global_max_pooling1d (Glob  (None, 128)               0         
+ alMaxPooling1D)                                                 
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense (Dense)               (None, 128)               16512     
+                                                                 
+ batch_normalization (Batch  (None, 128)               512       
+ Normalization)                                                  
+                                                                 
+ dense_1 (Dense)             (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 2838305 (10.83 MB)
+Trainable params: 143749 (561.52 KB)
+Non-trainable params: 2694556 (10.28 MB)
+_________________________________________________________________
+2023-11-10 21:49:05,847 - root - INFO - Testing hyperparameters: Embedding Size=300, LSTM Units=32, Batch Size=256
+2023-11-10 21:49:05,847 - root - INFO - Test Loss: 0.7833760976791382
+2023-11-10 21:49:05,847 - root - INFO - Test Accuracy: 0.8500000238418579
+2023-11-10 21:53:00,886 - tensorflow - INFO - Assets written to: model_logs/BiLSTM/model_0.824/assets
+2023-11-10 21:53:01,071 - root - INFO - Model Architecture:
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding_1 (Embedding)     (None, 40, 300)           2694300   
+                                                                 
+ bidirectional_1 (Bidirecti  (None, 40, 64)            85248     
+ onal)                                                           
+                                                                 
+ conv1d_1 (Conv1D)           (None, 40, 128)           41088     
+                                                                 
+ global_max_pooling1d_1 (Gl  (None, 128)               0         
+ obalMaxPooling1D)                                               
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_2 (Dense)             (None, 128)               16512     
+                                                                 
+ batch_normalization_1 (Bat  (None, 128)               512       
+ chNormalization)                                                
+                                                                 
+ dense_3 (Dense)             (None, 5)                 645       
+                                                                 
+=================================================================
+Total params: 2838305 (10.83 MB)
+Trainable params: 143749 (561.52 KB)
+Non-trainable params: 2694556 (10.28 MB)
+_________________________________________________________________
+2023-11-10 21:53:01,072 - root - INFO - Testing hyperparameters: Embedding Size=300, LSTM Units=32, Batch Size=128
+2023-11-10 21:53:01,072 - root - INFO - Test Loss: 0.9113070964813232
+2023-11-10 21:53:01,072 - root - INFO - Test Accuracy: 0.8240000009536743

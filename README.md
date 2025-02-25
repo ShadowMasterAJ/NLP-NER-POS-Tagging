@@ -1,4 +1,4 @@
-# Assignment 1
+# NER and POS Tagging for TREC Dataset
 
 ## Prerequisites
 - Python 3.x
